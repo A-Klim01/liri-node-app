@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/A-Klim01/liri-node-app#readme",
   "dependencies": {
-    "dotenv": "^8.1.0"
+    "dotenv": "^8.1.0",
+    "inquirer": "^7.0.0",
+    "node-spotify-api": "^1.1.1"
   }
 }
