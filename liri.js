@@ -3,16 +3,16 @@ require("dotenv").config();
 
 // Link keys.js page
 var keys = require("./keys.js");
- let request = require("request");
- var axios = require("axios");
+let request = require("request");
+var axios = require("axios");
 
 // require file systems
- var fs = require("fs");
+var fs = require("fs");
 
  //initialize Spotify
 var Spotify = require("node-spotify-api");
 
- var spotify = new Spotify({
+var spotify = new Spotify({
     id: keys.spotify.id,
     secret: keys.spotify.secret
 });
@@ -48,7 +48,7 @@ function userCommand(userInput, userQuery){
 userCommand(userInput, userQuery);
 
 function spotifyThisSong(userQuery){
-    console.log("spotify this song fired off")
+    //console.log("spotify this song fired off")
     spotify.search({ type:'track' , query: userQuery }, function (error, data) {
         if (error) {
             return console.log('Error occurred: ' + err);
@@ -88,7 +88,7 @@ function moviethis(userQuery){
 };
 
 function dowhatItSays(){
-    //code goes here
+    
     fs.readFile("random.txt", "utf8", function(err, data){
         if(err){
             console.log(err)
@@ -100,7 +100,5 @@ function dowhatItSays(){
 
 }
 ;
-//"https://rest.bandsintown.com/artists/" + userQuery + "?app_id=codingbootcamp";
 
-//use this for testing 
-//"https://rest.bandsintown.com/artists/pink?app_id=codingbootcamp";
+
